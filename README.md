@@ -2,6 +2,8 @@
 
 Does El Paso lose more of its young adults than comparable Texas metros — and if so, how, and to where? This analysis compares El Paso County against five other major Texas counties (Travis/Austin, Bexar/San Antonio, Dallas, Harris/Houston, Tarrant/Fort Worth) using two U.S. Census Bureau data products.
 
+## Read the analysis here -->https://hoffmanap.github.io/brain-drain/
+
 ## Bottom line
 
 El Paso's 18-24 population is the only one among six major Texas counties that **shrank** between 2013 and 2023 (-6.7%), while every other county grew, some by double digits. The cause isn't that El Paso's young people leave at an unusually high rate — its overall out-migration rate is mid-pack. The cause is that **far fewer young people move in to replace them** than in any peer county: El Paso's inflow-to-outflow ratio for 18-24-year-olds is the lowest of all six counties in every year tested (roughly 1 arrival for every 2 departures, vs. closer to 1-for-1 or better everywhere else). El Paso's own 25-30 cohort, by contrast, grew right in line with its peers (+11.3%) — this is a story about the front end of the pipeline (who moves in), not a wholesale exodus.
