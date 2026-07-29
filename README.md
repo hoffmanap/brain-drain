@@ -83,24 +83,45 @@ The dominance of Doña Ana County reflects the tightly integrated El Paso-Las Cr
 
 ## Why the pattern might exist: hypotheses tested against data
 
-Six hypotheses for El Paso's 25-30 pull were tested directly using ACS 1-Year PUMS microdata (recent movers into each county, identified via a non-blank `MIGSP`, crossed against `POBP`, `NATIVITY`, `CIT`, `COW`, `MIL`, `OCCP`, `INDP`, `MAR`/`MARHYP`, and `PINCP`). Three came back with a clear, distinctive signal for El Paso; three did not — both results are worth reporting.
+Six hypotheses for El Paso's 25-30 pull were tested directly using ACS 1-Year PUMS microdata (recent movers into each county, identified via a positive, valid `MIGSP` code, crossed against `POBP`, `NATIVITY`, `CIT`, `COW`, `MIL`, `OCCP`, `INDP`, `MAR`/`MARHYP`, and `PINCP`). Three came back with a clear, distinctive signal for El Paso; one came back mixed; two did not — all results are worth reporting, including the ones that changed once a data bug was fixed (see the correction note at the end of this section).
 
 **Confirmed: government and military employment.** Compared to the average of the other five counties' 25-30 in-migrants, El Paso's 25-30 in-migrants are:
-- **5.2x** more likely to be federal government employees (11.1% vs. a 2.2% peer average)
-- **12.2x** more likely to be active-duty military (6.6% vs. 0.5%)
-- **2.2x** more likely to work in protective-service occupations specifically — police, border/security-adjacent roles (3.5% vs. 1.6%)
+- **5.9x** more likely to be federal government employees (18.0% vs. a 3.0% peer average)
+- **12.4x** more likely to be active-duty military (12.3% vs. 1.0%)
+- **2.0x** more likely to work in protective-service occupations specifically — police, border/security-adjacent roles (3.5% vs. 1.7%)
 
-This elevation shows up in El Paso's 18-24 movers too (9.4% federal, 6.9% active-duty), just slightly less than in 25-30 — so government/military presence isn't a mechanism unique to the older cohort, it's a structural feature of El Paso's economy at every age tested. It complements, rather than fully explains, the 18-24 shortfall (that's more the UTEP story below), while it goes a long way toward explaining why the 25-30 cohort holds up as well as it does.
+This elevation is actually **stronger among El Paso's 18-24 movers** (24.5% federal, 18.8% active-duty) than its 25-30 movers — so this isn't a mechanism that kicks in specifically at the older age band. Whoever does move to El Paso, at any age tested, is disproportionately federal/military-connected compared to peer metros. Combined with the UTEP finding below, a coherent picture emerges: El Paso doesn't pull in many *civilian* 18-24 arrivals at all, so the ones who do arrive skew heavily toward military accession and federal hiring pipelines rather than reflecting a broader "young people are choosing El Paso" story.
 
-Worth noting: El Paso's 25-30 movers also have the **lowest mean personal income of all six counties** ($24,338 vs. a $34,638 peer average, roughly 30% lower). This is consistent with government/military jobs providing stability and a clear reason to relocate rather than a high-paying career leap — and likely also reflects El Paso's lower regional wage levels generally, not something distinctive about who specifically moves there.
+Worth noting: El Paso's 25-30 movers also have the **lowest mean personal income of all six counties** ($25,727 vs. a $37,308 peer average, roughly 31% lower). This is consistent with government/military jobs providing stability and a clear reason to relocate rather than a high-paying career leap — and likely also reflects El Paso's lower regional wage levels generally, not something distinctive about who specifically moves there.
 
-**Modest support: boomerang migration.** El Paso's 25-30 in-migrants are 41.3% Texas-born, versus a 37.6% average among the other five counties (a 1.1x ratio) — a real but modest signal, and Bexar County actually edges out El Paso on this specific measure (44.6%). Every county's Texas-born share among movers drops between the 18-24 and 25-30 cohorts, so this isn't a pattern unique to El Paso; El Paso is simply somewhat above the middle of the pack on it.
+**Mixed: cross-border connection, but not general immigration.** El Paso's 25-30 movers are **1.6x more likely to be born in Mexico specifically** than the peer average (12.5% vs. 7.7%) — but they're *less* likely to be foreign-born overall (17.0% vs. 21.8% peer average) or non-citizens (12.3% vs. 18.0%). That's a specific, real pattern, not a contradiction: El Paso's cross-border tie runs through Mexican-origin population specifically (likely including US-citizen, binational, or naturalized residents with family ties across the border), rather than the broader, more nationally-diverse immigration that drives Dallas's or Houston's numbers.
 
-**Not supported: cross-border/binational household formation.** The hypothesis that El Paso's proximity to Mexico specifically drives its 25-30 inflow did not hold up: El Paso's 25-30 movers are 14.2% born in Mexico (Dallas is actually higher, at 14.8%) and only 16.3% foreign-born overall — the **lowest** foreign-born share of all six counties except Bexar. Whatever is pulling people to El Paso at 25-30, it isn't disproportionately a cross-border/immigration story relative to peer metros.
+**Not supported (revised — see correction note): boomerang migration.** El Paso's 25-30 movers are 46.7% Texas-born, statistically identical to the 46.5% peer average (a 1.0x ratio). An earlier version of this analysis found modest support for this hypothesis (El Paso somewhat above the peer average); that finding didn't survive a data correction and should be treated as superseded — see below.
 
-**Not supported: healthcare-sector recruitment.** El Paso's 25-30 movers are 9.2% healthcare-industry workers, squarely in line with the peer range (7.7%-10.4%). No distinctive signal here.
+**Not supported: healthcare-sector recruitment.** In line with peers (El Paso 7.9% vs. 9.7% peer average). No distinctive signal.
 
-**Not supported: recent marriage / joining a partner.** El Paso's 25-30 movers are recently married at 11.6%, again in line with peers (10.5%-12.4%). No distinctive signal.
+**Not supported: recent marriage / joining a partner.** El Paso 16.2% vs. 14.2% peer average — a small difference, not distinctive enough to call a real signal.
+
+### Does anyone come back later? Testing the "boomerang" idea across the full lifecycle, not just 25-30
+
+The hypothesis behind "boomerang migration" is usually broader than one age band: the idea that people leave El Paso young and return once established — in their 40s, 50s, after retirement. That's directly testable by extending the same Texas-born-share metric across the full adult age range instead of stopping at 25-30. Here's what six full age bands show, averaged across 2012-2023:
+
+| County | 18-24 | 25-30 | 31-40 | 41-50 | 51-64 | 65+ |
+|---|--:|--:|--:|--:|--:|--:|
+| Bexar (San Antonio) | 60.0% | 54.2% | 50.2% | 44.8% | 49.5% | 48.7% |
+| Dallas | 51.4% | 43.9% | 37.0% | 35.6% | 39.3% | 44.0% |
+| **El Paso** | 50.6% | 46.7% | 42.4% | 33.9% | 32.8% | **22.6%** |
+| Harris (Houston) | 55.0% | 44.6% | 37.5% | 31.9% | 34.9% | 34.9% |
+| Tarrant (Fort Worth) | 55.0% | 49.5% | 42.5% | 37.9% | 37.2% | 42.6% |
+| Travis (Austin) | 56.4% | 40.1% | 34.1% | 36.7% | 36.5% | 38.0% |
+
+Every other county levels off or ticks back up by 65+ (Dallas actually rises from 35.6% at 41-50 to 44.0% at 65+ — a real boomerang signal, just not in El Paso). **El Paso is the only county that keeps declining all the way to 65+, ending at the lowest value of any county in any age band (22.6%).** This directly answers the original question: **no, El Paso does not show a distinctive pattern of natives returning once established — if anything, its oldest arrivals are the *least* likely to be Texas natives of any age group tested, in any of the six counties.**
+
+One coherent explanation ties this to the confirmed government/military finding above: this pattern is consistent with military retirees of any origin choosing to settle near their last duty station (Fort Bliss) after service, rather than native Texans coming home.
+
+**Testing the Hispanic-specific version of the same idea:** splitting El Paso's movers by Hispanic origin (`HISP`) shows the same declining pattern holds for Hispanic movers specifically — 54.4% Texas-born at 18-24 declining to 23.5% at 65+, no rebound. Hispanic movers are consistently more likely to be Texas-born than non-Hispanic movers at every age (unsurprising given regional demographics), but that gap does not widen with age the way a distinctly cultural "return to family/roots" pattern would predict. **The data doesn't support a Hispanic-specific version of the boomerang hypothesis either** — though this comparison rests on a much smaller non-Hispanic sample (roughly 1 non-Hispanic mover per 12-19 Hispanic movers in El Paso, per the underlying data), so treat the non-Hispanic side of this comparison as a rougher estimate than the Hispanic side.
+
+**Correction note:** an earlier version of this analysis found "modest support" for boomerang migration and "not supported" for the cross-border hypothesis. Both were based on a mover-identification bug (the filter wasn't excluding non-movers at all, so the population analyzed was actually everyone, not recent arrivals) and a separate zero-padding bug in the Texas-born comparison. Both are fixed now; the corrected numbers are what's reported above. A second, smaller limitation remains: "recent mover" is identified via a valid `MIGSP` code, which captures anyone who changed residence in the past year — including purely local, same-county moves, not exclusively people newly arriving in the county from elsewhere. There's no way to narrow this further without the same MIGPUMA crosswalk that proved impractical to source earlier in this project (see the methodology section above). The government/military and lifecycle findings are strong enough to survive this dilution — they're if anything *stronger* than an earlier (fully unfiltered) version of this analysis showed — but treat the more modest findings (Mexico-born, recent marriage) with appropriate caution given this scope limitation.
 
 ## Why the 18-24 pull is weak: a testable hypothesis
 
@@ -116,7 +137,8 @@ Sources: [College Factual, UTEP Diversity & Demographics](https://www.collegefac
 - `texas_out_migration_totals.csv` — total movers by county/year/cohort (Migration Flows)
 - `texas_out_migration_destinations.csv` — full destination-level detail (Migration Flows)
 - `texas_boomerang_and_government_pull.csv` — recent-mover composition by county/year/cohort: nativity, citizenship, employer type, occupation, industry, marital status, income (PUMS)
-- `brain_drain_trend_fixed.py`, `texas_out_migration.py`, `texas_boomerang_and_government_pull.py` — the scripts that produced the above
+- `texas_lifecycle_hispanic_return.csv` — Texas-born share of recent movers across six age bands (18-24 through 65+), overall and split by Hispanic origin (PUMS)
+- `brain_drain_trend_fixed.py`, `texas_out_migration.py`, `texas_boomerang_and_government_pull.py`, `texas_lifecycle_hispanic_return.py` — the scripts that produced the above
 
 ## Caveats worth keeping in mind
 
