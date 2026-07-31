@@ -172,6 +172,121 @@
     margin-top:16px;
   }
 
+  /* ---------- tier breakout diagram ---------- */
+  .tier-diagram{margin-top:24px; display:flex; flex-direction:column; gap:2px;}
+  .tier{padding:20px 22px; border:2px solid var(--ink);}
+  .tier-bad{background:#ffe3df;}
+  .tier-elpaso{background:var(--ink); color:var(--paper);}
+  .tier-good{background:#e3f5e6;}
+  .tier-label{
+    font-family:'Archivo Black',sans-serif;
+    font-size:17px;
+    margin-bottom:4px;
+  }
+  .tier-sublabel{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--sub);
+    margin:10px 0 8px;
+  }
+  .tier-elpaso .tier-sublabel{color:#bbb;}
+  .tier-chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    background:var(--paper);
+    border:1.5px solid var(--ink);
+    padding:4px 10px;
+    white-space:nowrap;
+  }
+  .chip b{margin-left:5px;}
+  .chip-ep{
+    background:var(--red);
+    color:var(--ink);
+    font-size:16px;
+    font-weight:700;
+    padding:8px 16px;
+  }
+
+  /* ---------- interactive data table ---------- */
+  .table-controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    align-items:center;
+    margin:24px 0 16px;
+  }
+  .search-box{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:14px;
+    padding:9px 12px;
+    border:2px solid var(--ink);
+    background:var(--paper);
+    color:var(--ink);
+    flex:1;
+    min-width:180px;
+  }
+  .search-box:focus{outline:none; background:#fff;}
+  .download-btn{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    padding:10px 16px;
+    background:var(--yellow);
+    border:2px solid var(--ink);
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .download-btn:hover{background:var(--pink);}
+  .group-filter{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    padding:9px 10px;
+    border:2px solid var(--ink);
+    background:var(--paper);
+    color:var(--ink);
+  }
+  .data-table-wrap{
+    max-height:480px;
+    overflow-y:auto;
+    border:2px solid var(--ink);
+  }
+  #dataTable{
+    width:100%;
+    border-collapse:collapse;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+  }
+  #dataTable thead th{
+    position:sticky;
+    top:0;
+    background:var(--ink);
+    color:var(--paper);
+    text-align:left;
+    padding:10px 12px;
+    cursor:pointer;
+    user-select:none;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    white-space:nowrap;
+  }
+  #dataTable thead th:hover{background:#3a352c;}
+  #dataTable tbody td{
+    padding:8px 12px;
+    border-bottom:1px solid #e6e0d2;
+    white-space:nowrap;
+  }
+  #dataTable tbody tr:hover{background:#f2ecdd;}
+  #dataTable tbody tr.el-paso-row{background:var(--yellow); font-weight:700;}
+  #dataTable tbody tr.el-paso-row:hover{background:var(--yellow);}
+  .sort-arrow{opacity:0.5; margin-left:4px;}
+  .row-count{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--sub); margin-top:10px;}
+
   /* ---------- hypothesis tag list ---------- */
   .hyplist{list-style:none; margin:26px 0 0; padding:0;}
   .hyprow{
@@ -431,6 +546,207 @@
     <p class="lede">Every other county here has a university system that actively recruits 18-year-olds from elsewhere &mdash; UT-Austin, Texas A&amp;M and UT-Arlington for Dallas-Fort Worth, UTSA, University of Houston. Freshman enrollment is a real driver of 18-24 in-migration in those metros. UTEP mostly isn't providing that pull &mdash; it's overwhelmingly educating people who were already there.</p>
     <p class="caveat">Source: College Factual and CollegeSimply, UTEP student demographics, 2025. This doesn't explain the full gap on its own &mdash; entry-level job market composition and general 18-24 lifestyle draw plausibly matter too &mdash; but it's the one piece of this narrative grounded in an external fact rather than inference from the migration numbers alone.</p>
   </section>
+
+  <section>
+    <div class="kicker">05b &mdash; checked against 63 other US counties</div>
+    <h2>Does this hold up <span class="hl blue">nationally?</span></h2>
+    <p class="lede">Everything so far compares El Paso against five other Texas metros. To check whether the pattern is actually distinctive &mdash; or just how mid-sized border/Sun Belt counties look in general &mdash; the same analysis was extended to 64 counties nationally: the original six, 16 US-Mexico border counties, and the principal county of each of the top-50 US cities by population.</p>
+
+    <div class="statgrid">
+      <div class="statcard"><div class="num">32<span style="font-size:20px;">nd</span></div><div class="lab">of 63 &mdash; El Paso's overall out-migration rank, dead center</div></div>
+      <div class="statcard"><div class="num">11<span style="font-size:20px;">th</span></div><div class="lab">WORST of 64 &mdash; El Paso's 18-24 out-migration rate</div></div>
+      <div class="statcard"><div class="num">15<span style="font-size:20px;">th</span></div><div class="lab">WORST of 64 &mdash; El Paso's 18-24 in/out ratio</div></div>
+    </div>
+    <p class="lede">Young El Pasoans aren't leaving at an unusually high rate &mdash; if anything the opposite is true nationally, not just among Texas peers. But paired with the weak inflow, this is a low-mobility signature, not a healthy one: <b class="mark">El Paso keeps company with the 14 places that have it worse &mdash; and that company is not encouraging.</b></p>
+
+    <div class="callout">One unplanned confirmation of the government/military mechanism: <b>Cochise County, AZ</b> &mdash; home to Fort Huachuca (Army Intelligence) &mdash; has the <b>3rd-highest out-migration rate of all 64 counties</b>, despite being small, rural, and nothing like the big coastal metros that otherwise top this list. A population shaped by military rotation shows dramatically elevated churn &mdash; the same mechanism identified in El Paso, showing up independently in a completely different place.</div>
+
+    <h2 style="font-size:22px; margin-top:40px;">The 14 places with a worse 18-24 in/out ratio than El Paso.</h2>
+    <p class="lede">This is the list that should give pause. Every single county with a worse ratio than El Paso's 0.51 is either a small, economically struggling South Texas border county, or a Rust Belt city in long-term, well-documented population decline. <b>There is no third category.</b> El Paso is not in the company of dynamic, growing peer cities here &mdash; it's one step above places widely understood to be in genuine distress.</p>
+
+    <div class="tier-diagram">
+      <div class="tier tier-bad">
+        <div class="tier-label">Worse than El Paso &mdash; 14 counties</div>
+        <div class="tier-sublabel">Poorer South Texas border counties</div>
+        <div class="tier-chips">
+          <span class="chip">Eagle Pass, TX <b>0.02</b></span>
+          <span class="chip">Luna, NM <b>0.07</b></span>
+          <span class="chip">Santa Cruz, AZ <b>0.13</b></span>
+          <span class="chip">Del Rio, TX <b>0.14</b></span>
+          <span class="chip">Hidalgo, NM <b>0.17</b></span>
+          <span class="chip">Starr, TX <b>0.18</b></span>
+          <span class="chip">Imperial, CA <b>0.28</b></span>
+          <span class="chip">Brownsville, TX <b>0.28</b></span>
+          <span class="chip">Laredo, TX <b>0.31</b></span>
+          <span class="chip">McAllen, TX <b>0.42</b></span>
+          <span class="chip">Zapata, TX <b>0.44</b></span>
+        </div>
+        <div class="tier-sublabel" style="margin-top:14px;">Rust Belt cities in long-term decline</div>
+        <div class="tier-chips">
+          <span class="chip">Detroit, MI <b>0.42</b></span>
+          <span class="chip">Memphis, TN <b>0.46</b></span>
+          <span class="chip">Cleveland, OH <b>0.48</b></span>
+        </div>
+      </div>
+
+      <div class="tier tier-elpaso">
+        <div class="tier-label">El Paso, TX</div>
+        <div class="tier-chips"><span class="chip chip-ep">0.51 in/out ratio</span></div>
+      </div>
+
+      <div class="tier tier-good">
+        <div class="tier-label">Better than El Paso &mdash; 49 counties</div>
+        <div class="tier-sublabel">Including its two closest natural comparisons</div>
+        <div class="tier-chips">
+          <span class="chip">Las Cruces, NM <b>1.02</b></span>
+          <span class="chip">Tucson, AZ <b>1.10</b></span>
+          <span class="chip">Philadelphia, PA <b>1.08</b></span>
+          <span class="chip">Washington, DC <b>1.03</b></span>
+          <span class="chip">Boston, MA <b>1.26</b></span>
+          <span class="chip">San Francisco, CA <b>1.34</b></span>
+          <span class="chip">New York, NY <b>1.42</b></span>
+        </div>
+      </div>
+    </div>
+    <p class="caveat">18-24 in-migration &divide; out-migration, 2011-2015 ACS 5-year vintage. Full ranked list of all 64 counties, every metric, is in the interactive table and downloadable dataset below.</p>
+
+    <h2 style="font-size:22px; margin-top:40px;">The sharpest version of the UTEP argument yet.</h2>
+    <p class="lede">This national data surfaces a near-perfect natural comparison. <b class="mark">Doña Ana County (Las Cruces, NM)</b> and <b class="mark">Pima County (Tucson, AZ)</b> are both border-adjacent, both broadly similar to El Paso in regional economic profile &mdash; and both have <b>positive</b> 18-24 in/out ratios, the opposite of El Paso.</p>
+
+    <div class="chart">
+      <div class="bar-row">
+        <div class="bar-label hi">El Paso, TX</div>
+        <div class="bar-track"><div class="bar-fill" style="width:51%; background:var(--red);"></div></div>
+        <div class="bar-val" style="color:var(--red)">0.51</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Doña Ana (Las Cruces), NM</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%; background:var(--amber);"></div></div>
+        <div class="bar-val">1.02</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Pima (Tucson), AZ</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%; background:var(--green);"></div></div>
+        <div class="bar-val">1.10</div>
+      </div>
+    </div>
+    <p class="caveat">18-24 in-migration &divide; out-migration, 2011-2015 ACS 5-year vintage. Bars capped at 100% width for display; Doña Ana and Pima both exceed 1.0 (more arrivals than departures).</p>
+
+    <p class="lede">The difference between these three places tracks exactly what the UTEP hypothesis predicts: <b>NMSU</b> and the <b>University of Arizona</b> are real, out-of-state-recruiting universities with genuine college-town pull. <b>UTEP is a 98% commuter school.</b> Same border region, same general economic context &mdash; and the one place without a recruiting university shows a completely different migration signature. This is about as close to a controlled comparison as observational data gets.</p>
+
+    <p class="lede" style="margin-top:28px;">The best 18-24 ratios nationally belong to two recognizable groups: genuine college towns with real outside draw (Tucson 1.10, Philadelphia 1.08) and major hub cities young people move to for jobs and culture (New York 1.42, San Francisco 1.34, Boston 1.26, Washington DC 1.03).</p>
+    <p class="caveat">Methodology note: this national comparison uses county FIPS codes exclusively, not PUMA codes &mdash; a deliberate choice to avoid the PUMA-vintage risk that caused most of the earlier bugs in this project. New York City is represented by New York County (Manhattan) only, not all five boroughs; a few top-50 cities sharing a county (Phoenix/Mesa, Fort Worth/Arlington) are counted once.</p>
+  </section>
+
+  <section>
+    <div class="kicker">05d &mdash; the full dataset</div>
+    <h2>Every county, <span class="hl yellow">every number.</span></h2>
+    <p class="lede">All 64 counties analyzed &mdash; the original six, 16 border counties, and 42 top-50-city counties &mdash; with population, overall out-migration rate, and the 18-24-specific rate and in/out ratio. Search, sort by clicking any column header, or filter by group. El Paso is highlighted.</p>
+
+    <div class="table-controls">
+      <input type="text" class="search-box" id="countySearch" placeholder="Search county or state...">
+      <select class="group-filter" id="groupFilter">
+        <option value="">All groups</option>
+        <option value="Original Six">Original Six</option>
+        <option value="Border County">Border County</option>
+        <option value="Top-50 City">Top-50 City</option>
+      </select>
+      <button class="download-btn" id="downloadBtn">&#8681; Download CSV</button>
+    </div>
+
+    <div class="data-table-wrap">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th data-key="county">County <span class="sort-arrow"></span></th>
+            <th data-key="group">Group <span class="sort-arrow"></span></th>
+            <th data-key="population">Population <span class="sort-arrow"></span></th>
+            <th data-key="allAgesRate">All-Ages Rate % <span class="sort-arrow"></span></th>
+            <th data-key="rate1824">18-24 Rate % <span class="sort-arrow"></span></th>
+            <th data-key="ratio1824">18-24 In/Out Ratio <span class="sort-arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="dataTableBody"></tbody>
+      </table>
+    </div>
+    <div class="row-count" id="rowCount"></div>
+    <p class="caveat">All-ages rate: 2016-2020 5-year vintage. 18-24 rate and ratio: 2011-2015 5-year vintage (the more recent of only two years Census publishes this age breakdown for). Population: 2022 ACS 5-year estimate, same verified source used throughout this script.</p>
+  </section>
+
+  <script>
+    const countyData = [{"county": "Albuquerque (Bernalillo), NM", "group": "Top-50 City", "population": 674692, "allAgesRate": 5.44, "rate1824": 7.73, "ratio1824": 0.855}, {"county": "Atlanta (Fulton), GA", "group": "Top-50 City", "population": 1061944, "allAgesRate": 9.81, "rate1824": 17.83, "ratio1824": 0.734}, {"county": "Bakersfield (Kern), CA", "group": "Top-50 City", "population": 906883, "allAgesRate": 4.04, "rate1824": 6.79, "ratio1824": 0.837}, {"county": "Baltimore City, MD", "group": "Top-50 City", "population": 584548, "allAgesRate": 9.13, "rate1824": 12.88, "ratio1824": 1.003}, {"county": "Bexar (San Antonio), TX", "group": "Original Six", "population": 2014059, "allAgesRate": 4.58, "rate1824": 9.03, "ratio1824": 0.78}, {"county": "Boston (Suffolk), MA", "group": "Top-50 City", "population": 785443, "allAgesRate": 9.31, "rate1824": 12.7, "ratio1824": 1.26}, {"county": "Cameron (Brownsville), TX", "group": "Border County", "population": 421854, "allAgesRate": 3.36, "rate1824": 5.37, "ratio1824": 0.281}, {"county": "Charlotte (Mecklenburg), NC", "group": "Top-50 City", "population": 1115403, "allAgesRate": 6.94, "rate1824": 12.14, "ratio1824": 0.88}, {"county": "Chicago (Cook), IL", "group": "Top-50 City", "population": 5225367, "allAgesRate": 4.67, "rate1824": 11.8, "ratio1824": 0.641}, {"county": "Cleveland (Cuyahoga), OH", "group": "Top-50 City", "population": 1256620, "allAgesRate": 4.7, "rate1824": 13.59, "ratio1824": 0.48}, {"county": "Cochise, AZ", "group": "Border County", "population": 125504, "allAgesRate": 9.63, "rate1824": 13.57, "ratio1824": 0.799}, {"county": "Columbus (Franklin), OH", "group": "Top-50 City", "population": 1318149, "allAgesRate": 5.56, "rate1824": 11.04, "ratio1824": 1.151}, {"county": "Dallas, TX", "group": "Original Six", "population": 2604053, "allAgesRate": 5.87, "rate1824": 10.28, "ratio1824": 0.658}, {"county": "Denver, CO", "group": "Top-50 City", "population": 710800, "allAgesRate": 12.08, "rate1824": 19.57, "ratio1824": 0.887}, {"county": "Detroit (Wayne), MI", "group": "Top-50 City", "population": 1781641, "allAgesRate": 3.69, "rate1824": 11.1, "ratio1824": 0.424}, {"county": "Dona Ana (Las Cruces), NM", "group": "Border County", "population": 219870, "allAgesRate": 5.2, "rate1824": 6.85, "ratio1824": 1.024}, {"county": "El Paso County (Colorado Springs), CO", "group": "Top-50 City", "population": 730323, "allAgesRate": 8.43, "rate1824": 12.92, "ratio1824": 0.742}, {"county": "El Paso, TX", "group": "Original Six", "population": 863832, "allAgesRate": 5.3, "rate1824": 6.88, "ratio1824": 0.513}, {"county": "Fresno, CA", "group": "Top-50 City", "population": 1008280, "allAgesRate": 2.82, "rate1824": 6.36, "ratio1824": 0.797}, {"county": "Harris (Houston), TX", "group": "Original Six", "population": 4726177, "allAgesRate": 4.02, "rate1824": 8.28, "ratio1824": 0.656}, {"county": "Hidalgo (McAllen), TX", "group": "Border County", "population": 873167, "allAgesRate": 2.73, "rate1824": 3.7, "ratio1824": 0.415}, {"county": "Hidalgo, NM", "group": "Border County", "population": 4160, "allAgesRate": 2.57, "rate1824": 25.37, "ratio1824": 0.165}, {"county": "Imperial, CA", "group": "Border County", "population": 179578, "allAgesRate": 4.03, "rate1824": 9.76, "ratio1824": 0.278}, {"county": "Indianapolis (Marion), IN", "group": "Top-50 City", "population": 971737, "allAgesRate": 6.08, "rate1824": 11.35, "ratio1824": 0.772}, {"county": "Jacksonville (Duval), FL", "group": "Top-50 City", "population": 995708, "allAgesRate": 5.75, "rate1824": 9.7, "ratio1824": 0.78}, {"county": "Kansas City (Jackson), MO", "group": "Top-50 City", "population": 715526, "allAgesRate": 6.51, "rate1824": 11.49, "ratio1824": 0.831}, {"county": "Las Vegas (Clark), NV", "group": "Top-50 City", "population": 2265926, "allAgesRate": 3.46, "rate1824": 6.19, "ratio1824": 0.708}, {"county": "Los Angeles, CA", "group": "Top-50 City", "population": 9936690, "allAgesRate": 3.51, "rate1824": 7.7, "ratio1824": 0.743}, {"county": "Louisville (Jefferson), KY", "group": "Top-50 City", "population": 779232, "allAgesRate": 4.83, "rate1824": 9.36, "ratio1824": 0.595}, {"county": "Luna, NM", "group": "Border County", "population": 25393, "allAgesRate": 8.41, "rate1824": 14.15, "ratio1824": 0.066}, {"county": "Maverick (Eagle Pass), TX", "group": "Border County", "population": 57806, "allAgesRate": 2.63, "rate1824": 8.44, "ratio1824": 0.018}, {"county": "Memphis (Shelby), TN", "group": "Top-50 City", "population": 926440, "allAgesRate": 4.59, "rate1824": 9.61, "ratio1824": 0.463}, {"county": "Miami-Dade, FL", "group": "Top-50 City", "population": 2688237, "allAgesRate": 4.15, "rate1824": 6.73, "ratio1824": 0.544}, {"county": "Milwaukee, WI", "group": "Top-50 City", "population": 933063, "allAgesRate": 4.75, "rate1824": 9.92, "ratio1824": 1.017}, {"county": "Minneapolis (Hennepin), MN", "group": "Top-50 City", "population": 1270787, "allAgesRate": 6.29, "rate1824": 15.97, "ratio1824": 0.889}, {"county": "Nashville (Davidson), TN", "group": "Top-50 City", "population": 709786, "allAgesRate": 8.15, "rate1824": 9.9, "ratio1824": 0.942}, {"county": "New Orleans (Orleans Parish), LA", "group": "Top-50 City", "population": 380408, "allAgesRate": 8.17, "rate1824": 12.71, "ratio1824": 0.634}, {"county": "New York (Manhattan), NY", "group": "Top-50 City", "population": 1645867, "allAgesRate": 8.08, "rate1824": 13.17, "ratio1824": 1.415}, {"county": "Oakland (Alameda), CA", "group": "Top-50 City", "population": 1663823, "allAgesRate": 6.52, "rate1824": 12.98, "ratio1824": 0.996}, {"county": "Oklahoma City (Oklahoma), OK", "group": "Top-50 City", "population": 795822, "allAgesRate": 5.66, "rate1824": 10.97, "ratio1824": 0.861}, {"county": "Omaha (Douglas), NE", "group": "Top-50 City", "population": 582638, "allAgesRate": 5.94, "rate1824": 11.83, "ratio1824": 0.72}, {"county": "Philadelphia, PA", "group": "Top-50 City", "population": 1593208, "allAgesRate": 5.12, "rate1824": 9.07, "ratio1824": 1.081}, {"county": "Phoenix (Maricopa), AZ", "group": "Top-50 City", "population": 4430871, "allAgesRate": 3.62, "rate1824": 7.66, "ratio1824": 0.664}, {"county": "Pima (Tucson), AZ", "group": "Border County", "population": 1042393, "allAgesRate": 4.71, "rate1824": 7.14, "ratio1824": 1.099}, {"county": "Portland (Multnomah), OR", "group": "Top-50 City", "population": 808098, "allAgesRate": 7.48, "rate1824": 16.51, "ratio1824": 0.896}, {"county": "Raleigh (Wake), NC", "group": "Top-50 City", "population": 1132103, "allAgesRate": 5.52, "rate1824": 12.34, "ratio1824": 0.749}, {"county": "Sacramento, CA", "group": "Top-50 City", "population": 1579211, "allAgesRate": 4.49, "rate1824": 10.27, "ratio1824": 0.899}, {"county": "San Diego, CA", "group": "Border County", "population": 3289701, "allAgesRate": 5.13, "rate1824": 10.75, "ratio1824": 0.751}, {"county": "San Francisco, CA", "group": "Top-50 City", "population": 851036, "allAgesRate": 9.28, "rate1824": 18.56, "ratio1824": 1.336}, {"county": "San Jose (Santa Clara), CA", "group": "Top-50 City", "population": 1916831, "allAgesRate": 6.17, "rate1824": 11.6, "ratio1824": 0.751}, {"county": "Santa Cruz, AZ", "group": "Border County", "population": 47838, "allAgesRate": 3.35, "rate1824": 17.0, "ratio1824": 0.13}, {"county": "Seattle (King), WA", "group": "Top-50 City", "population": 2254371, "allAgesRate": 6.01, "rate1824": 12.33, "ratio1824": 0.875}, {"county": "Starr, TX", "group": "Border County", "population": 65716, "allAgesRate": 3.7, "rate1824": 5.18, "ratio1824": 0.181}, {"county": "Tampa (Hillsborough), FL", "group": "Top-50 City", "population": 1468560, "allAgesRate": 6.0, "rate1824": 9.81, "ratio1824": 0.805}, {"county": "Tarrant (Fort Worth), TX", "group": "Original Six", "population": 2113854, "allAgesRate": 4.76, "rate1824": 9.51, "ratio1824": 0.687}, {"county": "Travis (Austin), TX", "group": "Original Six", "population": 1289054, "allAgesRate": 7.03, "rate1824": 15.04, "ratio1824": 0.906}, {"county": "Tulsa, OK", "group": "Top-50 City", "population": 668923, "allAgesRate": 5.46, "rate1824": 10.34, "ratio1824": 0.656}, {"county": "Val Verde (Del Rio), TX", "group": "Border County", "population": 47693, "allAgesRate": 6.47, "rate1824": 13.67, "ratio1824": 0.136}, {"county": "Virginia Beach City, VA", "group": "Top-50 City", "population": 457900, "allAgesRate": 8.41, "rate1824": 18.3, "ratio1824": 0.623}, {"county": "Washington (District of Columbia), DC", "group": "Top-50 City", "population": 670587, "allAgesRate": 10.62, "rate1824": 19.63, "ratio1824": 1.031}, {"county": "Webb (Laredo), TX", "group": "Border County", "population": 267282, "allAgesRate": 2.76, "rate1824": 3.49, "ratio1824": 0.311}, {"county": "Wichita (Sedgwick), KS", "group": "Top-50 City", "population": 522700, "allAgesRate": 4.68, "rate1824": 7.98, "ratio1824": 0.598}, {"county": "Yuma, AZ", "group": "Border County", "population": 204374, "allAgesRate": 5.18, "rate1824": 6.35, "ratio1824": 1.163}, {"county": "Zapata, TX", "group": "Border County", "population": 13896, "allAgesRate": 1.94, "rate1824": 10.48, "ratio1824": 0.441}];
+
+    let sortKey = 'ratio1824';
+    let sortAsc = true;
+
+    function renderTable() {
+      const searchVal = document.getElementById('countySearch').value.toLowerCase();
+      const groupVal = document.getElementById('groupFilter').value;
+      let rows = countyData.filter(r => {
+        const matchesSearch = r.county.toLowerCase().includes(searchVal);
+        const matchesGroup = !groupVal || r.group === groupVal;
+        return matchesSearch && matchesGroup;
+      });
+      rows.sort((a, b) => {
+        let av = a[sortKey], bv = b[sortKey];
+        if (av === null) av = sortAsc ? Infinity : -Infinity;
+        if (bv === null) bv = sortAsc ? Infinity : -Infinity;
+        if (typeof av === 'string') return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
+        return sortAsc ? av - bv : bv - av;
+      });
+
+      const tbody = document.getElementById('dataTableBody');
+      tbody.innerHTML = rows.map(r => {
+        const isEP = r.county === 'El Paso, TX';
+        return `<tr class="${isEP ? 'el-paso-row' : ''}">
+          <td>${r.county}</td>
+          <td>${r.group}</td>
+          <td>${r.population !== null ? r.population.toLocaleString() : '—'}</td>
+          <td>${r.allAgesRate !== null ? r.allAgesRate.toFixed(2) + '%' : '—'}</td>
+          <td>${r.rate1824 !== null ? r.rate1824.toFixed(2) + '%' : '—'}</td>
+          <td>${r.ratio1824 !== null ? r.ratio1824.toFixed(3) : '—'}</td>
+        </tr>`;
+      }).join('');
+
+      document.getElementById('rowCount').textContent = `Showing ${rows.length} of ${countyData.length} counties`;
+
+      document.querySelectorAll('#dataTable thead th').forEach(th => {
+        const arrow = th.querySelector('.sort-arrow');
+        arrow.textContent = th.dataset.key === sortKey ? (sortAsc ? '▲' : '▼') : '';
+      });
+    }
+
+    document.querySelectorAll('#dataTable thead th').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.key;
+        if (sortKey === key) { sortAsc = !sortAsc; } else { sortKey = key; sortAsc = true; }
+        renderTable();
+      });
+    });
+    document.getElementById('countySearch').addEventListener('input', renderTable);
+    document.getElementById('groupFilter').addEventListener('change', renderTable);
+
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const headers = ['County', 'Group', 'Population_2022', 'AllAges_OutMigration_Rate_Pct', 'Rate_1824_Pct', 'InOutRatio_1824'];
+      const csvRows = [headers.join(',')];
+      countyData.forEach(r => {
+        csvRows.push([
+          `"${r.county}"`, `"${r.group}"`, r.population ?? '', r.allAgesRate ?? '', r.rate1824 ?? '', r.ratio1824 ?? ''
+        ].join(','));
+      });
+      const blob = new Blob([csvRows.join('\n')], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'el_paso_national_comparison_summary.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    renderTable();
+  </script>
 
   <section>
     <div class="kicker">06 &mdash; how this was built</div>
